@@ -1,0 +1,67 @@
+.presentation-card-container {
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.presentation-card {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.presentation-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.presentation-card__card-header {
+  height: 80px;
+  width: 100%;
+  background-image: url(https://fakeimg.pl/1080x80/);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.presentation-card__card-header > img.profile-img {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.presentation-card__card-header > div.name-container {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.presentation-card__card-header > div.name-container > p {
+  font-size: 22px;
+  color: white;
+  line-height: 22px;
+  margin: 0;
+}
+
+.presentation-card__card-body {
+  padding: 6px 12px;
+}
+
+.presentation-card__card-body > .info-row {
+  width: 100%;
+}
+
+.presentation-card__card-body > .info-row > p.label,
+p.value {
+  margin: 0;
+  font-size: 18px;
+  color: #565656;
+  display: inline-block;
+}
+
+.presentation-card__card-body > .info-row > p.value {
+  padding-left: 12px;
+  color: black;
+}

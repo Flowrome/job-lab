@@ -1,0 +1,94 @@
+@import 'vars.css';
+@import 'ios-fix.css';
+@import 'presentation-card.css';
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+body {
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+.container-fluid {
+  padding: 0 24px;
+}
+
+header {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+main {
+  box-sizing: border-box;
+  min-height: calc(100% - 76px);
+}
+
+main.padded {
+  padding-top: 24px;
+}
+
+main.sticky-header {
+  padding-top: calc(76px + 24px);
+}
+
+#heading-title {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+footer.container-fluid {
+  background-color: var(--primary-color);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer > ul > li > a {
+  padding: 10px 0;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+footer > ul > li > a:hover,
+footer > ul > li > a:focus {
+  color: var(--accent-color);
+}
+
+footer > ul > li > a > img {
+  height: 20px;
+  padding-right: 24px;
+}

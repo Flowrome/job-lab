@@ -1,0 +1,32 @@
+html {
+  --notch-status-bar-color: var(--primary-color);
+  --notch-bottom-bar-color: black;
+  padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+    env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px) !important;
+  box-sizing: border-box;
+  position: relative;
+}
+
+html::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: var(--notch-bottom-bar-color);
+}
+html::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background-color: var(--notch-status-bar-color);
+}
+
+body {
+  position: relative;
+  z-index: 1;
+}
